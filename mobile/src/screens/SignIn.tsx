@@ -1,12 +1,12 @@
-import { Center, Icon, Text } from "native-base";
 import { Fontisto } from "@expo/vector-icons";
+import { Center, Icon, Text } from "native-base";
 
 import Logo from "../assets/logo.svg";
-import { Button } from "../components/Button";
 import { useAuth } from "../hooks/useAuth";
+import { Button } from "../components/Button";
 
 export function SignIn() {
-  const { user, signIn } = useAuth();
+  const { isUserLoading, signIn } = useAuth();
 
   return (
     <Center flex={1} bgColor="gray.900" p={7}>
@@ -14,9 +14,13 @@ export function SignIn() {
 
       <Button
         mt={12}
-        type="SECONDARY"
-        title="Entrar com o Google"
         onPress={signIn}
+        type="SECONDARY"
+        isLoading={isUserLoading}
+        title="Entrar com o Google"
+        _loading={{
+          _spinner: { color: "white" },
+        }}
         leftIcon={
           <Icon as={Fontisto} name="google" color="white" fontSize="md" />
         }
