@@ -1,14 +1,14 @@
 import { NativeBaseProvider, StatusBar } from "native-base";
 import {
   useFonts,
-  Roboto_400Regular,
-  Roboto_500Medium,
   Roboto_700Bold,
+  Roboto_500Medium,
+  Roboto_400Regular,
 } from "@expo-google-fonts/roboto";
 
+import { Routes } from "./src/routes";
 import { THEME } from "./src/styles/theme";
 import { Loading } from "./src/components/Loading";
-import { Find } from "./src/screens/Find";
 import { AuthContextProvider } from "./src/contexts/AuthContext";
 
 export default function App() {
@@ -27,7 +27,7 @@ export default function App() {
           backgroundColor="transparent"
         />
 
-        {fontIsLoaded ? <Find /> : <Loading />}
+        {fontIsLoaded ? <Routes /> : <Loading />}
       </AuthContextProvider>
     </NativeBaseProvider>
   );
