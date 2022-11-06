@@ -25,14 +25,13 @@ interface AuthProviderProps {
 export const AuthContext = createContext({} as AuthContextDataProps);
 
 export function AuthContextProvider({ children }: AuthProviderProps) {
-  const [user, setUser] = useState<UserProps>({} as UserProps);
   const [isUserLoading, setIsUserLoading] = useState(false);
+  const [user, setUser] = useState<UserProps>({} as UserProps);
 
   const [request, response, promptAsync] = Google.useAuthRequest({
-    clientId:
-      "150187245107-0fhk3vtp6o37hutdo0bdisdoci0ihonh.apps.googleusercontent.com",
-    redirectUri: AuthSession.makeRedirectUri({ useProxy: true }),
     scopes: ["profile", "email"],
+    clientId: process.env.CLIENT_ID,
+    redirectUri: AuthSession.makeRedirectUri({ useProxy: true }),
   });
 
   async function signIn() {
@@ -66,6 +65,7 @@ export function AuthContextProvider({ children }: AuthProviderProps) {
       setUser(userInfoResponse.data.user);
     } catch (error) {
       console.log(error);
+
       throw error;
     } finally {
       setIsUserLoading(false);
