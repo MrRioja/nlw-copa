@@ -36,7 +36,48 @@ Ocorreu do dia 31 de Outubro ao dia 07 de Novembro de 2022 e teve como intuito m
 
 ## NLW Copa
 
-Descrição em progresso 🚧
+Em clima de copa do mundo, a ultima edição da NLW de 2022 veio com o proposito de construirmos uma aplicação para criação de bolão e brincarmos com nossos amigos enquanto curtimos o maior evento esportivo do planeta.
+A aplicação do bolão possui interface web, aplicação móvel e o backend próprio criado do zero para atender todos os requisitos necessários para entregar a experiencia planejada pela aplicação. Vamos conhecer a aplicação nos tópicos a seguir e entender como ela funciona.
+
+### Landing Page
+
+A landing page da aplicação tem como objetivo apresentar de forma breve o projeto e tornar publico dados como: a quantidade de bolões criados e palpites dados na aplicação, conforme vemos abaixo:
+
+![Landing page](./readme/landing-page.png)
+
+A única funcionalidade presente na web é a criação de um novo bolão. Para isso, basta preencher o campo com o nome desejado e clicar em **Criar meu bolão** e pronto, um novo bolão será criado e seu respectivo código de convite será copiado para a area de transferência do usuário, conforme podemos notar no alerta da imagem abaixo:
+
+![Bolão criado](./readme/bolao-criado.png)
+
+### Aplicação móvel
+
+A aplicação móvel, além da criação de bolão, contempla as demais funcionalidades esperadas por um aplicação com esse proposito, as quais serão mostradas a seguir.
+
+Ao acessar o app, o usuário será direcionado para a tela de login, que é feito através de uma conta Google:
+
+<img alt="Tela de login" src="./readme/login-screen-mobile.png" height="400" />
+
+Após realizar o login, o usuário será direcionado para a home da aplicação. A primeira tela exibida será a de criação de bolão, cujo proposito é o mesmo da página web. Para realizar a criação basta informar o nome desejado e clicar no botão logo abaixo do campo, conforme ilustrado abaixo:
+
+<img alt="Criação de bolão" src="./readme/criar-bolao-mobile.png" height="400" />
+
+Na barra de navegação no inferior da tela, podemos alternar para a aba **Meus bolões**, aonde estarão listados todos os bolões ao qual o usuário logado está participando, conforme imagem abaixo:
+
+<img alt="Lista de bolões" src="./readme/lista-bolao-mobile.png" height="400" />
+
+No topo da tela, antes da listagem, temos a opção de buscar um bolão pelo código de convite que recebemos ao criar um bolão, seja pela web ou mobile. Para ingressar em um novo bolão, basta informar o seu código e clicar no botão para concluir o ingresso:
+
+<img alt="Buscar bolão por código" src="./readme/buscar-bolao-mobile.png" height="400" />
+
+Ao entrar em um bolão no qual o usuário é participante, logo no inicio serão exibidos os jogos disponíveis para palpite. Nos jogos já palpitados serão exibidos os placares sugeridos pelo usuário e não editáveis, para os jogos ainda não palpitados o usuário poderá inserir o placar e confirmar no campo que será exibido abaixo de cada jogo, conforme podemos ver a seguir:
+
+|                                Jogos ainda não palpitados                                |                                       Jogos já palpitados                                       |
+| :--------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------: |
+| <img alt="Lista de jogos do bolão" src="./readme/lista-jogos-mobile.png" height="400" /> | <img alt="Lista de jogos palpitados" src="./readme/jogos-palpitados-mobile.png" height="400" /> |
+
+Na tela do bolão além dos palpites temos também uma aba para ranking do bolão, porém não implementada. Para fecharmos nossa aplicação, temos a funcionalidade de copiar e compartilhar o código para novos participantes entrarem no bolão. Para isso, basta clicar no botão presente no canto superior direito, ao clicar teremos o resultado abaixo, basta escolher a forma que queremos compartilhar o código e enviar para os novos potenciais participantes:
+
+<img alt="Compartilhar bolão por código" src="./readme/compartilhar-bolao-mobile.png" height="400" />
 
 ## Instalação
 
