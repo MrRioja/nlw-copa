@@ -119,7 +119,7 @@ $ git clone git@github.com:MrRioja/nlw-copa.git
 # Acesse a pasta do projeto no terminal/cmd
 $ cd nlw-copa
 
-# Vá para a pasta server
+# Vá para a pasta web
 $ cd web
 
 # Instale as dependências
@@ -144,7 +144,7 @@ $ git clone git@github.com:MrRioja/nlw-copa.git
 # Acesse a pasta do projeto no terminal/cmd
 $ cd nlw-copa
 
-# Vá para a pasta server
+# Vá para a pasta mobile
 $ cd mobile
 
 # Instale as dependências
